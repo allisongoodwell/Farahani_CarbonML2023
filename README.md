@@ -1,8 +1,8 @@
 # Farahani_CarbonML2023
 contains python codes to reproduce results obtained in Farahani and Goodwell 2023 (submitted)
 
- Repository for Farahani et al, submitted Aug 2023
-Python codes for “Information Flow Paths Characterize Drivers of Land-Atmosphere Carbon Fluxes from Machine Learning Models and Data” by: M. A. Farahani and A.E. Goodwell, submitted Aug 2023 to Water Resources Research
+Repository for Farahani and Goodwell,  submitted September 2023, JGR Biogeosciences
+Python codes for “Information Flow Paths Characterize Drivers of Land-Atmosphere Carbon Fluxes from Machine Learning Models and Data”
 
 Dataset Preprocessing Script: Readdata.py
 The provided script is primarily designed for preprocessing and cleaning a set of CSV datasets. This script requires pandas and NumPy libraries for data manipulation and numerical operations respectively. The primary function accepts paths to five datasets. These datasets are categorized into two major groups: 'Ne' and 'Br'.
