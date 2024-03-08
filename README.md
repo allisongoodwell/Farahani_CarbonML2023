@@ -6,15 +6,16 @@ Python codes for “Information Flow Paths Characterize Drivers of Land-Atmosphe
 
 - **Dataset Preprocessing Script:** Readdata.py
 The provided script is primarily designed for preprocessing and cleaning a set of CSV datasets. This script requires pandas and NumPy libraries for data manipulation and numerical operations respectively. The primary function accepts paths to five datasets. These datasets are categorized into two major groups: `Ne` and `Br`, (AMF_US.zip file) from 5 maize-soybean rotation sites in the FLUXNET2015 dataset:
-1. [USNe1](https://doi.org/10.17190/AMF/1246084)
-2. [USNe2](https://doi.org/10.17190/AMF/1246085)
-3. [USNe3](https://doi.org/10.17190/AMF/1246086)
-4. [USBr1](https://doi.org/10.17190/AMF/1246038)
-5. [USBr3](https://doi.org/10.17190/AMF/1246039)
+    1. [USNe1](https://doi.org/10.17190/AMF/1246084)
+    2. [USNe2](https://doi.org/10.17190/AMF/1246085)
+    3. [USNe3](https://doi.org/10.17190/AMF/1246086)
+    4. [USBr1](https://doi.org/10.17190/AMF/1246038)
+    5. [USBr3](https://doi.org/10.17190/AMF/1246039)
 
-Note: There is meticulous attention to cleaning the dataset, ensuring that missing values and outliers don't skew analyses in further steps. It's crucial when using this script to ensure datasets provided match the expected format, and if there are any modifications to the data sources, appropriate changes are made to the script.
+    Note: There is meticulous attention to cleaning the dataset, ensuring that missing values and outliers don't skew analyses in further steps. It's crucial when using this script to ensure datasets provided match the expected format, and if there are any modifications to the data sources, appropriate changes are made to the script.
 
 - **Information Theoretic Analysis:** Allfunctions.py
+
 This script offers a suite of functions that aim to compute various information theoretic quantities and normalize data: With these functions, users can:
 1. Compute Shannon Entropy: shannon_entropy (x, bins): Computes the Shannon entropy of a dataset x using a specified number of bins.
 2. Mutual Information Analysis: mutual_information (dfi, source, target, bins, reshuffle=0,ntests=0): Computes the mutual information between two columns of a dataframe dfi specified by source and target using a given bin size bins. It also provides an option for reshuffling the data to generate a null distribution and establish a critical threshold for mutual information.
@@ -33,12 +34,14 @@ This script offers a suite of functions that aim to compute various information 
 2. Utilize the defined functions to compute metrics and visualizations as per your requirements.
 3. The script imports two custom modules “allfunctions” (as af) and “Performance” (as per). Ensure these modules are present in the same directory or their paths are appropriately added.
 
-Note: It's advisable to run this on a machine with multiple cores as the script uses parallel processing for some computations. Ensure to have adequate memory, especially when dealing with large datasets, as some computations (like heatmaps) can be memory intensive.
+    Note: It's advisable to run this on a machine with multiple cores as the script uses parallel processing for some computations. Ensure to have adequate memory, especially when dealing with large datasets, as some computations (like heatmaps) can be memory intensive.
 
 - **Implantation of machine learning models:** multiple linear regression (MLR.py), random forest (RF.py) and Long Short-Term Memory (LSTM.py) models
-These scripts provide two main functions, “Model_l” (applies model on each dataset independently, local training) and “Model_r” (performs model on combined dataset, regional training). This script expects `frames` to be a dictionary where each key corresponds to an index in the `dataset` list and each value is a DataFrame containing the data for that site or condition. 
+
+    These scripts provide two main functions, “Model_l” (applies model on each dataset independently, local training) and “Model_r” (performs model on combined dataset, regional training). This script expects `frames` to be a dictionary where each key corresponds to an index in the `dataset` list and each value is a DataFrame containing the data for that site or condition. 
 
 - **Main notebook:** Main.ipynb
-Main notebook to load the data, run ML models, save the result and calculate and plot all predictive and functional performance metrics. This Notebook imports all defined custom modules “readdata” (as rd), “allfunctions” (as af), “Performance” (as per), “MLR” (as mlr), “RF” (as rf), and “LSTM” (as lstm). Ensure these modules are present in the same directory or their paths are appropriately added.
-We also loaded the Goose Creek flux tower data directly in the main notebook (GCdata.zip file)
+
+    Main notebook to load the data, run ML models, save the result and calculate and plot all predictive and functional performance metrics. This Notebook imports all defined custom modules “readdata” (as rd), “allfunctions” (as af), “Performance” (as per), “MLR” (as mlr), “RF” (as rf), and “LSTM” (as lstm). Ensure these modules are present in the same directory or their paths are appropriately added.
+    We also loaded the Goose Creek flux tower data directly in the main notebook (GCdata.zip file)
 
