@@ -16,7 +16,7 @@ The provided script is primarily designed for preprocessing and cleaning a set o
 
 - **Information Theoretic Analysis:** Allfunctions.py
 
-This script offers a suite of functions that aim to compute various information theoretic quantities and normalize data: With these functions, users can:
+    This script offers a suite of functions that aim to compute various information theoretic quantities and normalize data: With these functions, users can:
 1. Compute Shannon Entropy: shannon_entropy (x, bins): Computes the Shannon entropy of a dataset x using a specified number of bins.
 2. Mutual Information Analysis: mutual_information (dfi, source, target, bins, reshuffle=0,ntests=0): Computes the mutual information between two columns of a dataframe dfi specified by source and target using a given bin size bins. It also provides an option for reshuffling the data to generate a null distribution and establish a critical threshold for mutual information.
 3. Conditional Mutual Information: conditional_mutual_information (dfi, source, target, condition, bins, reshuffle=0): Computes the conditional mutual information between two columns of a dataframe dfi given a third column as a condition.
@@ -30,9 +30,7 @@ This script offers a suite of functions that aim to compute various information 
 11. Data Normalization: Normalized (frames, method): Normalize your data using one of the three methods: Standard, MinMax, or Quantile normalization.
 
 - **Calculate all predictive and functional performance metrics:** Performance.py
-1. Load your data. Ensure that your data conforms to the labels and datasets specified.
-2. Utilize the defined functions to compute metrics and visualizations as per your requirements.
-3. The script imports two custom modules “allfunctions” (as af) and “Performance” (as per). Ensure these modules are present in the same directory or their paths are appropriately added.
+    Load your data. Ensure that your data conforms to the labels and datasets specified. Utilize the defined functions to compute metrics and visualizations as per your requirements. The script imports two custom modules “allfunctions” (as af) and “Performance” (as per). Ensure these modules are present in the same directory or their paths are appropriately added.
 
     Note: It's advisable to run this on a machine with multiple cores as the script uses parallel processing for some computations. Ensure to have adequate memory, especially when dealing with large datasets, as some computations (like heatmaps) can be memory intensive.
 
