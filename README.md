@@ -1,6 +1,8 @@
 # Farahani_CarbonML2023
 Contains python codes to reproduce results obtained in Farahani and Goodwell 2023 (submitted)
 
+DOI: 10.5281/zenodo.10802444
+
 ### Repository for Farahani et al, submitted Aug 2023
 Python codes for “Information Flow Paths Characterize Drivers of Land-Atmosphere Carbon Fluxes from Machine Learning Models and Data” by: M. A. Farahani and A.E. Goodwell, submitted Aug 2023 to Water Resources Research
 
